@@ -1,0 +1,60 @@
+    <!DOCTYPE HTML>
+<html>
+    <head id="HEAD1">
+        <title>Lista de reserva de Tablets</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/dados.js"></script>
+        <link href="css/receber.css" rel="stylesheet">
+        <link href="css/tabProxSemana.css" rel="stylesheet">
+        <link href="css/tabSemanaAtual.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="arrowAnim">
+            <div class="arrowSliding">
+              <div class="arrow"></div>
+            </div>
+            <div class="arrowSliding delay1">
+              <div class="arrow"></div>
+            </div>
+            <div class="arrowSliding delay2">
+              <div class="arrow"></div>
+            </div>
+            <div class="arrowSliding delay3">
+              <div class="arrow"></div>
+            </div>
+        </div>
+        <input type="submit" value=" Cadastro de Reservas" name="foi" onclick="redirecionar()">
+        <div class="form-area">
+            <spam>SEMANA ATUAL</spam>
+            <table>
+                <thead>
+                    <tr>
+                        <th class = "tabela">Professor</th>
+                        <th class = "tabela">Qtde</th>
+                        <th class = "tabela">Data</th>
+                        <th class = "tabela">Horário</th>
+                    </tr>
+                </thead>
+                <tbody id = "tab">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="form1-area">
+            <spam>PROXIMAS RESERVAS</spam>
+            <table>
+                <thead>
+                    <tr>
+                        <th class = "tabela">Professor</th>
+                        <th class = "tabela">Qtde</th>
+                        <th class = "tabela">Data</th>
+                        <th class = "tabela">Horário</th>
+                    </tr>
+                </thead>
+                <tbody id = "tab1">
+
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
