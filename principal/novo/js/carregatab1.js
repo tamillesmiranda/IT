@@ -28,75 +28,40 @@ $.get( "http://" + ip + ":3000/profs", function( data ) {
         comboCidades.add(opt, comboCidades.options[index + 1]);
     }
     var num = document.getElementById("q1");
-    for (let index = 0; index < 41; index++) {
+    for (let index = 0; index < 16; index++) {
         var k = document.createElement("option");
         k.value = index;
         k.text = index.toString();
         num.add(k, num.options[index]);
     }
     var num = document.getElementById("q2");
-    for (let index = 0; index < 41; index++) {
+    for (let index = 0; index < 16; index++) {
         var k = document.createElement("option");
         k.value = index;
         k.text = index.toString();
         num.add(k, num.options[index]);
     } 
     var num = document.getElementById("q3");
-    for (let index = 0; index < 41; index++) {
+    for (let index = 0; index < 16; index++) {
         var k = document.createElement("option");
         k.value = index;
         k.text = index.toString();
         num.add(k, num.options[index]);
     } 
     var num = document.getElementById("q4");
-    for (let index = 0; index < 41; index++) {
+    for (let index = 0; index < 16; index++) {
         var k = document.createElement("option");
         k.value = index;
         k.text = index.toString();
         num.add(k, num.options[index]);
     } 
     var num = document.getElementById("q5");
-    for (let index = 0; index < 41; index++) {
+    for (let index = 0; index < 16; index++) {
         var k = document.createElement("option");
         k.value = index;
         k.text = index.toString();
         num.add(k, num.options[index]);
-    } 
-    var num = document.getElementById("q6");
-    for (let index = 0; index < 41; index++) {
-        var k = document.createElement("option");
-        k.value = index;
-        k.text = index.toString();
-        num.add(k, num.options[index]);
-    } 
-    var num = document.getElementById("q7");
-    for (let index = 0; index < 41; index++) {
-        var k = document.createElement("option");
-        k.value = index;
-        k.text = index.toString();
-        num.add(k, num.options[index]);
-    } 
-    var num = document.getElementById("q8");
-    for (let index = 0; index < 41; index++) {
-        var k = document.createElement("option");
-        k.value = index;
-        k.text = index.toString();
-        num.add(k, num.options[index]);
-    } 
-    var num = document.getElementById("q9");
-    for (let index = 0; index < 41; index++) {
-        var k = document.createElement("option");
-        k.value = index;
-        k.text = index.toString();
-        num.add(k, num.options[index]);
-    } 
-    var num = document.getElementById("q10");
-    for (let index = 0; index < 41; index++) {
-        var k = document.createElement("option");
-        k.value = index;
-        k.text = index.toString();
-        num.add(k, num.options[index]);
-    }                
+    }                 
 });
 var horario;
 $.get( "http://" + ip + ":3000/tablets", function( data ) {
@@ -126,36 +91,21 @@ $.get( "http://" + ip + ":3000/tablets", function( data ) {
         coluna3.textContent  = date;
         var coluna4 = document.createElement("td");
         switch(n[i].hora){
-            case "07:30":   
-                horario = "07:30 - 08:15";
-            break;
-            case "08:20":
-            horario = "08:20 - 09:05";
-            break;
-            case "09:30":   
-                horario = "09:30 - 10:15"
-            break;
-            case "10:20": 
-                horario = "10:20 - 11:05"
-            break;
-            case "11:20": 
-                horario = "11:20 - 12:05"
-            break;
-            case "13:00":
-                horario = "13:00 - 13:45"
-            break;
-            case "13:50": 
-                horario = "13:50 - 14:35"
-            break;
-            case "14:55": 
-                horario = "14:55 - 15:40";
-            break;
-            case "15:45": 
-                horario = "15:45 - 16:30"
-            break;
-            case "16:50": 
-                horario = "16:50 - 17:35"
-            break;
+            case "19:00":   
+            horario = "19:00";
+        break;
+        case "20:00":
+            horario = "20:00";
+        break;
+        case "21:00":   
+            horario = "21:00";
+        break;
+        case "22:00": 
+            horario = "22:00";
+        break;
+        case "23:00": 
+            horario= "23:00";
+        break;
         }
         coluna4.textContent  = horario;
 

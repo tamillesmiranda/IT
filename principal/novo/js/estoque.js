@@ -10,38 +10,23 @@ function estoque(){
             var dia = date.toLocaleDateString();
             var diatab = dia[6] + dia[7] + dia[8] + dia[9] + "-" + dia[3] + dia[4] + "-" + dia[0] + dia[1];
             var n = JSON.parse(result); 
-            var quant = [0,0,0,0,0,0,0,0,0,0];
+            var quant = [0,0,0,0,0];
             for (let index = 0; index < n.length; index++) {
                 switch(n[index].hora){
-                    case "07:30":   
+                    case "19:00":   
                         quant[0] = parseInt(n[index].soma);
                     break;
-                    case "08:20":
+                    case "20:00":
                         quant[1] = parseInt(n[index].soma);
                     break;
-                    case "09:30":   
+                    case "21:00":   
                         quant[2] = parseInt(n[index].soma);
                     break;
-                    case "10:20": 
+                    case "22:00": 
                         quant[3] = parseInt(n[index].soma);
                     break;
-                    case "11:20": 
+                    case "23:00": 
                         quant[4] = parseInt(n[index].soma);
-                    break;
-                    case "13:00":
-                        quant[5] = parseInt(n[index].soma);
-                    break;
-                    case "13:50": 
-                        quant[6] = parseInt(n[index].soma);
-                    break;
-                    case "14:55": 
-                        quant[7] = parseInt(n[index].soma);
-                    break;
-                    case "15:45": 
-                        quant[8] = parseInt(n[index].soma);
-                    break;
-                    case "16:50": 
-                        quant[9] = parseInt(n[index].soma);
                     break;
         
                 }
@@ -59,22 +44,22 @@ function estoque(){
                 
                 var k = document.getElementById("disp");
                 if(tem == true){
-                    for(var i = 0; i < 10; i++){
+                    for(var i = 0; i < 5; i++){
                         var linha = document.createElement("tr");
                         var coluna1 = document.createElement("td"); 
-                        coluna1.textContent  = (40 - quant[i]);
+                        coluna1.textContent  = (15 - quant[i]);
                         linha.appendChild(coluna1);
                         k.appendChild(linha);
                     }     
                     tem = false;
                 }else{
-                    for (let index = 0; index < 10; index++) {
+                    for (let index = 0; index < 5; index++) {
                         k.deleteRow(0);
                     }
-                    for(var i = 0; i < 10; i++){
+                    for(var i = 0; i < 5; i++){
                         var linha = document.createElement("tr");
                         var coluna1 = document.createElement("td"); 
-                        coluna1.textContent  = (40 - quant[i]);
+                        coluna1.textContent  = (15 - quant[i]);
                         linha.appendChild(coluna1);
                         k.appendChild(linha);
                     }  

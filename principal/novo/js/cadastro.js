@@ -1,5 +1,5 @@
 //alert("Coloque os dados\nNão se pode superar 40 tablets no horario\nPara selacionar o horario basta clicar em cima dele.\nPara enviar clique em enviar.");
-var i, hr, z, valormax = 45, n, geral = 0, tot = 0,erro;
+var i, hr, z, valormax = 20, n, geral = 0, tot = 0,erro;
 var x = true;
 var ch = document.getElementsByName("check"); 
 function enviar(hora,quant){
@@ -72,11 +72,6 @@ function quant(){
     qt[2] = document.getElementById("q3");
     qt[3] = document.getElementById("q4");
     qt[4] = document.getElementById("q5");
-    qt[5] = document.getElementById("q6");
-    qt[6] = document.getElementById("q7");
-    qt[7] = document.getElementById("q8");
-    qt[8] = document.getElementById("q9");
-    qt[9] = document.getElementById("q10");
     var date = new Date();
     var dia = date.toLocaleDateString();
     var diatab = dia[6] + dia[7] + dia[8] + dia[9] + "-" + dia[3] + dia[4] + "-" + dia[0] + dia[1];
@@ -92,16 +87,16 @@ function quant(){
         alert("Nome vazio!!!");
         x=false;
     }
-    for(i=0, z = 0;i<10;i++){
+    for(i=0, z = 0;i<5;i++){
         if(ch[i].checked == false){
                 z++;
         }
-        if(z == 10){
+        if(z == 5){
             alert("Nenhum horario selecionado!!!");
             x=false;
         }
     }
-    for(i=0, z = 0;i<10;i++){
+    for(i=0, z = 0;i<5;i++){
         if(ch[i].checked == true){
             if(qt[i].value < 1 || qt[i].value > 15){
                 var horario = hor(ch[i].value);
@@ -117,7 +112,7 @@ function quant(){
             }
         }
     }
-    for(i=0, z = 0;i<10;i++){
+    for(i=0, z = 0;i<5;i++){
         if(ch[i].checked == true){
             if(x === true){
                 verificar(ch[i].value, parseInt(qt[i].value));
@@ -126,41 +121,26 @@ function quant(){
     }
 }
 function redirecionar(){
-    window.location.href = "file:///C:/Users/TI/Documents/GitHub/Reserva-de-tablets/tablets/receber/receber.html";
+    window.location.href = "file:///C:/Users/McLovin/Documents/GitHub/IT/principal/receber/receber.html";
 }
 
 function hor(hora) {
     var horario;
     switch(hora){
-        case "07:30":   
-            horario = "07:30 - 08:15";
+        case "19:00":   
+            horario = "19:00";
         break;
-        case "08:20":
-            horario = "08:20 - 09:05";
+        case "20:00":
+            horario = "20:00";
         break;
-        case "09:30":   
-            horario = "09:30 - 10:15";
+        case "21:00":   
+            horario = "21:00";
         break;
-        case "10:20": 
-            horario = "10:20 - 11:05";
+        case "22:00": 
+            horario = "22:00";
         break;
-        case "11:20": 
-            horario = "11:20 - 12:05";
-        break;
-        case "13:00":
-            horario = "13:00 - 13:45";
-        break;
-        case "13:50": 
-            horario = "13:50 - 14:35";
-        break;
-        case "14:55": 
-            horario = "14:55 - 15:40";
-        break;
-        case "15:45": 
-            horario = "15:45 - 16:30";
-        break;
-        case "16:50": 
-            horario = "16:50 - 17:35";
+        case "23:00": 
+            horario= "23:00";
         break;
     }
     return horario;

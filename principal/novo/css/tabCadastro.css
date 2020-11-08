@@ -156,7 +156,7 @@ select .qtde {
  }
  .form-area4{
     position: fixed;
-    top: 224px;
+    top: 125px;
     right: 56%;
     width: 10%;
     box-sizing: border-box;
@@ -177,7 +177,7 @@ select .qtde {
 }
 .form-area5{
     position: fixed;
-    top: 224px;
+    top: 125px;
     right: 25%;
     width: 10%;
     box-sizing: border-box;
