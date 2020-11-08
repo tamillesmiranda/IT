@@ -15,10 +15,7 @@ const con = mysql.createConnection({
   password: "root"
 });
 
-/* var connectionName = '187.94.63.95:1433';
-var user = 'usr_suico_q1xt10';
-var userPwd = 'Suic0@q1xt10!';
-var db = 'CorporeRM_Q1XT10'; */
+
 
 const database = "tablets";
 

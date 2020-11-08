@@ -20,7 +20,7 @@ function enviar(hora,quant){
             geral ++;
             if(geral == tot){
                 alert("Reserva(s) Realizada(s)!");
-                window.location.href = "file:///C:/Users/TI/Documents/GitHub/Reserva-de-tablets/tablets/novo/novo.html";
+                window.location.href = "file:///C:/Users/McLovin/Documents/GitHub/IT/principal/novo/novo.html";
             } 
         }
         })
@@ -42,16 +42,16 @@ function verificar(hora, quant){
         },success: function(result) {
             n = parseInt(result);
             var numerototal = n + quant;
-            if(numerototal > 40){
+            if(numerototal > 15){
                 erro ++;
-                var l = (numerototal - 40);
+                var l = (numerototal - 15);
                 var horario = hor(hora);
                 alert("Valor no horario " + horario + " superado em " + l + "\nReserva no horario não pode ser realizada.");
                 x = false;
                 geral++;
                 if(geral >= tot){
                     if (erro != geral) {
-                        window.location.href = "file:///C:/Users/TI/Documents/GitHub/Reserva-de-tablets/tablets/novo/novo.html";
+                        window.location.href = "file:///C:/Users/McLovin/Documents/GitHub/IT/principal/novo/novo.html";
                     }
                 } 
             }else{
@@ -103,7 +103,7 @@ function quant(){
     }
     for(i=0, z = 0;i<10;i++){
         if(ch[i].checked == true){
-            if(qt[i].value < 1 || qt[i].value > 40){
+            if(qt[i].value < 1 || qt[i].value > 15){
                 var horario = hor(ch[i].value);
                 alert("Valor no horario " + horario + " está com a quantidade incorreta.\nReserva no horario não pode ser realizada.");
                 x=false;

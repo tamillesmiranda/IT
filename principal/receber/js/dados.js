@@ -99,41 +99,26 @@ $.get( "http://" + ip + ":3000/tablets", function( data ) {
     }                      
 }); 
 function redirecionar(){
-    window.location.href = "file:///C:/Users/TI/Documents/GitHub/Reserva-de-tablets/tablets/novo/novo.html";
+    window.location.href = "file:///C:/Users/McLovin/Documents/GitHub/IT/principal/novo/novo.html";
 }
 
 function hor(hora) {
     var horario;
     switch(hora){
-        case "07:30":   
-            horario = "07:30 - 08:15";
+        case "19:00":   
+            horario = "19:00";
         break;
-        case "08:20":
-            horario = "08:20 - 09:05";
+        case "20:00":
+            horario = "20:00";
         break;
-        case "09:30":   
-            horario = "09:30 - 10:15";
+        case "21:00":   
+            horario = "21:00";
         break;
-        case "10:20": 
-            horario = "10:20 - 11:05";
+        case "22:00": 
+            horario = "22:00";
         break;
-        case "11:20": 
-            horario= "11:20 - 12:05";
-        break;
-        case "13:00":
-            horario = "13:00 - 13:45"
-        break;
-        case "13:50": 
-            horario = "13:50 - 14:35"
-        break;
-        case "14:55": 
-            horario = "14:55 - 15:40";
-        break;
-        case "15:45": 
-            horario = "15:45 - 16:30";
-        break;
-        case "16:50": 
-            horario = "16:50 - 17:35";
+        case "23:00": 
+            horario= "23:00";
         break;
     }
     return horario;
