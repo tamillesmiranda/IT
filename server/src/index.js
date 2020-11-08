@@ -17,7 +17,7 @@ const con = mysql.createConnection({
 
 
 
-const database = "tablets";
+const database = "projeto";
 
 
 app.use(bodyParser.urlencoded({
