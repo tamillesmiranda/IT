@@ -28,7 +28,7 @@
         </div>
         <input type="submit" value="Lista Completa de Reservas" name="foi" onclick="redirecionar()">
         <div class="form-area1">
-        <spam>RESERVAS</spam>
+        <spam>RESERVAS DO DIA</spam>
             <table>
                 <thead>
                     <tr>
@@ -43,14 +43,18 @@
             <br><br>
         </div>
         <div class="form-area">
-            <spam>MESAS</spam>
+            <spam>RESERVA DE TABLETS</spam>
                 <label>
                     <div class="select">
                     <form action="localhost:3000">
                         <table>
                             <thead>
+                                <tr>
+                                    <th class = "tabeladisp">Nome</th>
+                                </tr>
                             </thead>
                         </table>
+                    <input class="select-css" id="nome" onblur=rever()></select><br>
                     </div>
                 </label>
                 <table>
@@ -85,7 +89,7 @@
                 <table>
                     <thead>
                         <tr>
-                            <th class = "tabeladisp">Quantidade</th>
+                            <th class = "tabeladisp">N° de Mesas</th>
                         </tr>
                     </thead>
                 </table>

@@ -17,7 +17,7 @@ const con = mysql.createConnection({
 
 
 
-const database = "projeto";
+const database = "tablets";
 
 
 app.use(bodyParser.urlencoded({
@@ -118,4 +118,4 @@ app.get("/", (req, res) => {
   res.send("Aplicação de tablets");
 });
 
-app.listen(3000);
+app.listen(3306);

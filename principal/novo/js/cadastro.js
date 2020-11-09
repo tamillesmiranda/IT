@@ -81,11 +81,7 @@ function quant(){
     }
     if(document.getElementById("dia").value < diatab){
         alert("A data deve ser hoje ou depois!");
-        x=false;
-    }
-    if(document.getElementById("nome").value == "Selecione o nome"){
-        alert("Nome vazio!!!");
-        x=false;
+        x=false
     }
     for(i=0, z = 0;i<5;i++){
         if(ch[i].checked == false){
