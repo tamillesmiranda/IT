@@ -20,7 +20,7 @@ function enviar(hora,quant){
             geral ++;
             if(geral == tot){
                 alert("Reserva(s) Realizada(s)!");
-                window.location.href = "file:///C:/Users/McLovin/Documents/GitHub/IT/principal/novo/novo.html";
+                window.location.href = "file:///C:/Users/user/Documents/GitHub/IT/principal/novo/novo.html";
             } 
         }
         })
@@ -51,7 +51,7 @@ function verificar(hora, quant){
                 geral++;
                 if(geral >= tot){
                     if (erro != geral) {
-                        window.location.href = "file:///C:/Users/McLovin/Documents/GitHub/IT/principal/novo/novo.html";
+                        window.location.href = "file:///C:/Users/user/Documents/GitHub/IT/principal/novo/novo.html";
                     }
                 } 
             }else{
@@ -117,7 +117,7 @@ function quant(){
     }
 }
 function redirecionar(){
-    window.location.href = "file:///C:/Users/McLovin/Documents/GitHub/IT/principal/receber/receber.html";
+    window.location.href = "file:///C:/Users/user/Documents/GitHub/IT/principal/receber/receber.html";
 }
 
 function hor(hora) {

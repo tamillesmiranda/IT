@@ -99,7 +99,7 @@ $.get( "http://" + ip + ":3000/tablets", function( data ) {
     }                      
 }); 
 function redirecionar(){
-    window.location.href = "file:///C:/Users/McLovin/Documents/GitHub/IT/principal/novo/novo.html";
+    window.location.href = "file:///C:/Users/user/Documents/GitHub/IT/principal/novo/novo.html";
 }
 
 function hor(hora) {
