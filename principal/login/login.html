@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head id="HEAD1">
-        <title>Lista de reserva de Tablets</title>
+        <title>Pagina de login</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/principal.js"></script>
         <link href="css/principal.css" rel="stylesheet">
@@ -25,15 +25,49 @@
         </div>
         <input type="submit" value=" Cadastro de Reservas" name="foi" onclick="redirecionar()">
         <div class="form1-area">
-            <spam>LOGIN PARA CLIENTES</spam>
+          <h3 class="title has-text-grey">Sistema de Login de CLiente</h3>
+          <p></p>
             <table>
-                <thead>
-                    <tr>
-                        <th class = "tabela">Efetue o login para proceguir</th>
-                        
-                    </tr>
-                </thead>
+              <div class="box">
+                <form action="cadastrar.php" method="POST">
+                    <div class="field">
+                        <div class="control">
+                            <input name="nome" type="text" class="input is-large" placeholder="usuário" autofocus>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <input name="senha" class="input is-large" type="number" placeholder="senha">
+                        </div>
+                      </div>
+                    
+                      <button><a href="C:\Users\Note\OneDrive\Documentos\GitHub\projeto\IT\principal\administrador\usuario.html"> Login </a></button>
+                </form>
+            </div>
+            <p>-------------------------------------------------------------------------</p>
+            <h3 class="title has-text-grey">Sistema de Login de Administrador</h3>
+
+            <p> </p>
+            <table>
+              <div class="box">
+                <form action="cadastrar.php" method="POST">
+                    <div class="field">
+                        <div class="control">
+                            <input name="nome" type="text" class="input is-large" placeholder="usuário" autofocus>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <input name="senha" class="input is-large" type="number" placeholder="senha">
+                        </div>
+                      </div>
+                    
+                    <button><a href="C:\Users\Note\OneDrive\Documentos\GitHub\projeto\IT\principal\administrador\administrador.html"> Login </a></button>
+                </form>
+            </div>
+            
                 <tbody id = "tab1">
+                  
 
                 </tbody>
             </table>
