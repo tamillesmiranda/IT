@@ -119,8 +119,8 @@ function quant(){
 function redirecionar(){
     window.location.href = "file:///C:/Users/user/Documents/GitHub/IT/principal/receber/receber.html";
 }
-function retornar(){
-    window.location.href = "file:///C:/Users/user/Documents/GitHub/IT/principal/login/principal.html";
+//function retornar(){
+ //   window.location.href = "file:///C:/Users/user/Documents/GitHub/IT/principal/login/principal.html";
 
 function hor(hora) {
     var horario;
