@@ -118,4 +118,4 @@ app.get("/", (req, res) => {
   res.send("Aplicação de tablets");
 });
 
-app.listen(3306);
+app.listen(3000);
