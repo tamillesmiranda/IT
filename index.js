@@ -1,4 +1,28 @@
 const express = require("express");
+const cors = require("cors");
+const mongoose = require("mongoose");
+const requireDir = require("require-dir");
+
+
+
+//Iniciando o app
+const app = express();
+app.use(express.json());
+app.use(cors());
+
+//Iniciando o DB
+mongoose.connect("mongodb://localhost:27017/projeto", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
+
+requireDir("./src/models");
+
+
+app.use('/', require('./src/routes'));
+
+app.listen(3000);
+/*const express = require("express");
 const mysql = require("mysql");
 const cors = require("cors");
 
@@ -118,4 +142,4 @@ app.get("/", (req, res) => {
   res.send("Aplicação de tablets");
 });
 
-app.listen(3000);
+app.listen(3000);*/

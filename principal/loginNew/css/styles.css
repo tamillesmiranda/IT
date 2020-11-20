@@ -28,16 +28,16 @@ body {
 /* form */
 #loginUser {
   width: 500px;
-  margin-left: 300px;
+  margin-left: 100px;
   margin-right: auto;
   background-color: #FFF;
   border-radius: 10px;
   padding: 25px;
-  position: absolute;
+  position: fixed;
 }
 #loginAdm {
   width: 500px;
-  margin-left: auto;
+  margin-left: 750px;
   margin-right: 300px;
   background-color: #FFF;
   border-radius: 10px;

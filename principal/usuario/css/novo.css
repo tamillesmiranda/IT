@@ -38,7 +38,7 @@ h2 {
 }
 .font {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #ffffff;
+    color: black;
 }
 .celula {
     width: 100px;
@@ -111,7 +111,7 @@ input[type=number]::-webkit-outer-spin-button {
     background: #F4F4F4;
 }
 ::-webkit-scrollbar-thumb {
-    background: tomato;
+    background: #ce9654;
 }
 input[type=submit]{
     border: none;
@@ -123,12 +123,12 @@ input[type=submit]{
     color: #ffffff;
     font-size: 15px;
     background-color: transparent;
-    background-image: linear-gradient(-90deg, transparent, tomato);
+    background-image: linear-gradient(-90deg, transparent, #ce9654);
     cursor:pointer;
     border-radius: 20px;
 }
 input[type=submit]:hover{
     background-color: transparent;
-    background-image: linear-gradient(-90deg, transparent, #F0B77D);
-    color: #ffffff;
+    background-image: linear-gradient(-90deg, transparent, #ce9654);
+    color: transparent;
 }

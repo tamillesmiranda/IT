@@ -65,10 +65,10 @@
     width: auto;
     text-align: center;
     color: whitesmoke;
-    background-color:tomato;
+    background-color:#ce9654;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 400;
-    left: 34px;
+    left: 4px;
     border-radius: 25px;
 }
 ::-webkit-scrollbar-track {
