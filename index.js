@@ -139,7 +139,7 @@ app.post("/tablets",(req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Aplicação de tablets");
+  res.send("Aplicação de reservas");
 });
 
 app.listen(3000);*/
