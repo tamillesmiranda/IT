@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html lang="pt" dir="ltr">
+    <head id = "HD1">
+        <title>Sistema</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/cons.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+
+    <form>
+        <h1>Cadastro Consumidor</h1><br>
+        <label for="nome">Nome</label>
+        <input id="nome" type="text" required/><br>
+        <label for="cpf">CPF</label>
+        <input type="text" id="input" maxlength="11" /><span id="resposta"></span><br>
+        <label for="rg">RG</label>
+        <input id="rg" type="text" required/><br>
+        <label for="cep">CEP</label>
+        <input id="cep" type="text" maxlength="8" required/><br>
+        <label for="logradouro">Logradouro</label>
+        <input id="logradouro" type="text" required/><br>
+        <label for="numero">Número</label>
+        <input id="numero" type="text" /><br>
+        <label for="complemento">Complemento</label>
+        <input id="complemento" type="text"/><br>
+        <label for="bairro">Bairro</label>
+        <input id="bairro" type="text" required/><br>
+        <label for="uf">Estado</label>
+        <select id="uf">
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+            <script type="text/javascript" src ="js/cons.js"></script>
+        </select>
+        <h1>Cartão de credito</h1>
+        <label for="num">N°</label>
+        <input type="tel" name="cc" id="cc" maxlength="19" /><br>
+        <label for="vct">Vencimento</label>
+        <input type="tel" name="vct" id="vct" maxlength="5"/><br>                
+    </form>
+
+   <!--cadastro fornecedor-->
+   <form>
+    <h1>Cadastro Fornecedor</h1><br>
+    <label for="nome">Nome</label>
+    <input id="nome" type="text" required/><br>
+    <label for="cpf">CPF</label>
+    <input id="cpf" type="text" onkeyup="cpfCheck(this)" maxlength="14" onkeydown="javascript:fMasc(this, mCPF);"><br>
+    <label for="rg">RG</label>
+    <input id="rg" type="text" required/><br>
+    <label for="cep">CEP</label>
+    <input id="cep" type="text" maxlength="8" required/><br>
+    <label for="logradouro">Logradouro</label>
+    <input id="logradouro" type="text" required/><br>
+    <label for="numero">Número</label>
+    <input id="numero" type="text" /><br>
+    <label for="complemento">Complemento</label>
+    <input id="complemento" type="text"/><br>
+    <label for="bairro">Bairro</label>
+    <input id="bairro" type="text" required/><br>
+    <label for="uf">Estado</label>
+    <select id="uf">
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option>
+        <script type="text/javascript" src ="js/cons.js"></script>
+    </select>
+</form>
+
+<form>
+    <h3>Para voltar à página inicial clique no botão abaixo. </h3>
+</form>
+
+<body>
+    <a href="index.html"><input type="submit" value="inicio"></a>
+</body>
+
+
+</body>
+</html>
