@@ -1,0 +1,157 @@
+/* geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+  color: #323232;
+  border: none;
+}
+h1{
+  margin-bottom: 5px;
+}
+input, label {
+  display: block;
+  outline: none;
+  width: 100%;
+}
+input[type=submit] {
+  border: none;
+  text-align: center;
+  top: 10%;
+  right: 5%;
+  height: 35px;
+  width: 310px;
+  color: #ffffff;
+  font-size: 15px;
+  background-color: transparent;
+  background-image: linear-gradient(-90deg, transparent, #ce9654);
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+#btn-submit1{
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+#btn-submit2{
+  margin-top: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+a {
+  color: #E60084;
+}
+
+body {
+  padding-top: 5vh;
+  background-image: url('../img/f.jpg');
+  background-size: cover;
+  background-position-y: -150px;
+}
+
+/* form */
+#loginUser {
+  width: 500px;
+  margin-left: 100px;
+  margin-right: auto;
+  background-color: #FFF;
+  border-radius: 10px;
+  padding: 25px;
+  position: absolute;
+}
+#loginAdm {
+  width: 500px;
+  margin-left: 100px;
+  margin-right: 300px;
+  margin-bottom: 10px;
+  background-color: #FFF;
+  border-radius: 10px;
+  margin-top: 90px;
+  padding: 25px;
+  position: absolute;
+}
+#cartao{
+  width: 400px;
+  margin-left: 750px;
+  margin-right: 300px;
+  background-color: #FFF;
+  border-radius: 10px;
+  padding: 25px;
+  position: relative;
+  font-family: Helvetica, sans-serif;
+  color: #323232;
+}
+
+#main-container h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.full-box {
+  flex: 1 1 100%;
+  position: relative;
+}
+
+.half-box {
+  flex: 1 1 45%;
+  position: relative;
+}
+
+.spacing {
+  margin-right: 2.5%;
+}
+
+label {
+  font-weight: bold;
+  font-size: .8rem;
+}
+
+input {
+  border-bottom: 2px solid #323232;
+  font-size: .9rem;
+  margin-bottom: 40px;
+}
+
+input:focus {
+  border-color: #ce9654;
+}
+
+input[type="submit"] {
+  background-color: #ce9654;
+  color: #FFF;
+  border: none;
+  border-radius: 20px;
+  height: 40px;
+  cursor: pointer;
+}
+
+#agreement {
+  margin-right: 5px;
+}
+
+#agreement, #agreement-label {
+  display: inline-block;
+  width: auto;
+}
+
+.error-validation {
+  color: #ff1a1a;
+  position: absolute;
+  top: 57px;
+  font-size: 12px;
+}
+
+.template {
+  display: none;
+}
