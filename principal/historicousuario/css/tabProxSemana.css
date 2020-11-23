@@ -33,7 +33,7 @@
     height: 550px;
     font-size: 16px;
     box-sizing: border-box;
-    backgrounD:#FFFFFF; 
+    background:rgba(51, 50, 50, 0.452); 
     text-align: center;
     text-transform: capitalize;
     padding-right: 30px;

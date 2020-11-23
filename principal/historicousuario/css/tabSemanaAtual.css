@@ -2,13 +2,13 @@
     position: fixed;
     overflow:auto; 
     font-size: 16px;
-    top: 54%;
+    top: 60%;
     right: 30%;
-    transform: translate(-50%,-50%);
-    width: 630px;
-    height: 550px;
+    transform: translate(-10%,-55%);
+    width: 600px;
+    height: 500px;
     box-sizing: border-box;
-    background:#FFFFFF;
+    background:#ffffff;
     text-align: center;
     text-transform: capitalize;
 }  
