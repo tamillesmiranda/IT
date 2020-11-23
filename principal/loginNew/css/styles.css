@@ -28,7 +28,7 @@ body {
 /* form */
 #loginUser {
   width: 500px;
-  margin-left: 100px;
+  margin-left: 50px;
   margin-right: auto;
   background-color: #FFF;
   border-radius: 10px;
@@ -38,6 +38,7 @@ body {
 #loginAdm {
   width: 500px;
   margin-left: 750px;
+  padding-top: 10px;
   margin-right: 300px;
   background-color: #FFF;
   border-radius: 10px;
