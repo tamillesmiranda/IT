@@ -10,6 +10,7 @@ var consumidores = mongoose.Schema({
     senha: String,
     endereco: [{ logradouro: String },
       { numero: String },
+      { complemento: String },
       { bairro: String },
       { cidade: String }, 
       { cep: String }, 
