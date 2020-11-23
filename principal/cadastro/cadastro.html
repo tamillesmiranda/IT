@@ -27,13 +27,14 @@
               <div class="arrow"></div>
             </div>
         </div>
-        <input type="submit" value="Pagina inicial" name="foi" onclick="redirecionar()">
+        <a href="C:\Users\Note\Documentos\IT\principal\loginNew\index.html">
+        <input type="submit" value="Pagina inicial" name="foi" onclick="redirecionar()"></a>
         
         
         <div class="form-area">
             <div id="forms">
                 <div id="loginUser">
-                <h1>Cadastro Consumidor</h1>
+                <h1>Cadastro Cliente</h1>
                 <form id="register-form" action="">
                     <div class="half-box spacing ">
                         <label for="cpf">CPF</label>
@@ -110,6 +111,8 @@
 
                     <input type="password" class="cvv" placeholder="CVV">
 
+                    <input id="btn-submit" type="submit" value="Realizar Cadastro">
+
                 <!--
                 <label for="num">N°</label>
                 <input type="tel" name="cc" id="cc" maxlength="19" /><br><br>
@@ -117,86 +120,9 @@
                 <input type="tel" name="vct" id="vct" maxlength="5"/> -->
                 </div>
             
-                <div id="submitCon"></div>
-                <div class="full-box">
-                    <input id="btn-submit1" type="submit" value="Finalizar Cadastro Consumidor">
-                  </div>
-                  </div>
+                
                       
    
-                  <div class="form-area2">
-                    <div id="forms2">
-                        <div id="loginAdm">
-                        <h1>Cadastro Consumidor</h1>
-                        <form id="register-form" action="">
-                            <div class="half-box spacing ">
-                                <label for="cpf">CPF</label>
-                                <input id="cpf" type="text" onkeyup="cpfCheck(this)" maxlength="14" onkeydown="javascript:fMasc(this, mCPF);">
-                            </div>
-                            <div class="half-box ">
-                                <label for="rg">RG</label>
-                                <input id="rg" type="text" required/>
-                            </div>
-                            <div class="half-box spacing">
-                                <label for="cep">CEP</label>
-                                <input id="cep" type="text" maxlength="8" required/>
-                            </div>
-                            <div class="half-box ">
-                                <label for="logradouro">Logradouro</label>
-                                <input id="logradouro" type="text" required/>
-                            </div>
-                            <div class="half-box spacing">
-                                <label for="numero">Número</label>
-                            <input id="numero" type="number" />
-                            </div>
-                            <div class="half-box ">
-                                <label for="complemento">Complemento</label>
-                                <input id="complemento" type="text"/>
-                            </div>
-                            <div class="half-box spacing">
-                                <label for="bairro">Bairro</label>
-                                <input id="bairro" type="text" required/>
-                            </div>
-                            <div class="half-box spacing">
-                                <label for="uf">Estado</label>
-                            <select id="uf">
-                                <option value="AC">Acre</option>
-                                <option value="AL">Alagoas</option>
-                                <option value="AP">Amapá</option>
-                                <option value="AM">Amazonas</option>
-                                <option value="BA">Bahia</option>
-                                <option value="CE">Ceará</option>
-                                <option value="DF">Distrito Federal</option>
-                                <option value="ES">Espírito Santo</option>
-                                <option value="GO">Goiás</option>
-                                <option value="MA">Maranhão</option>
-                                <option value="MT">Mato Grosso</option>
-                                <option value="MS">Mato Grosso do Sul</option>
-                                <option value="MG">Minas Gerais</option>
-                                <option value="PA">Pará</option>
-                                <option value="PB">Paraíba</option>
-                                <option value="PR">Paraná</option>
-                                <option value="PE">Pernambuco</option>
-                                <option value="PI">Piauí</option>
-                                <option value="RJ">Rio de Janeiro</option>
-                                <option value="RN">Rio Grande do Norte</option>
-                                <option value="RS">Rio Grande do Sul</option>
-                                <option value="RO">Rondônia</option>
-                                <option value="RR">Roraima</option>
-                                <option value="SC">Santa Catarina</option>
-                                <option value="SP">São Paulo</option>
-                                <option value="SE">Sergipe</option>
-                                <option value="TO">Tocantins</option>
-                                <script type="text/javascript" src ="js/cons.js"></script>
-                            </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="submitForn"></div>
-                <div class="full-box">
-                    <input id="btn-submit2" type="submit" value="Finalizar Cadastro Fornecedor">
-                  </div>
-                  </div>
+                  
 </body>
 </html>
