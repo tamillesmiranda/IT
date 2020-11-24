@@ -15,24 +15,7 @@
         <link href="css/tabReserva.css" rel="stylesheet">
     </head>
     <body>
-        <div id="arrowAnim">
-            <div class="arrowSliding">
-              <div class="arrow"></div>
-            </div>
-            <div class="arrowSliding delay1">
-              <div class="arrow"></div>
-            </div>
-            <div class="arrowSliding delay2">
-              <div class="arrow"></div>
-            </div>
-            <div class="arrowSliding delay3">
-              <div class="arrow"></div>
-            </div>
-        </div>
-        <a href="C:\Users\Note\Documentos\IT\principal\historicousuario\historico.html"></a>
-        <input type="submit" value="Minhas Reservas" name="foi" onclick="redirecionar()" >
-        <!-- <input type="submit" value="Lista Completa de Reservas" name="foi" onclick="retornar()"> -->
-
+<!--tabela de reservas-->
         <div class="form-area">
             <spam>RESERVA DE MESA</spam>
                 <table>
@@ -64,23 +47,6 @@
             </div>
             </form><br>
 
-          <!--  <div id="all">
-                <div id="login-box">
-                  <div id="login-header">
-                    Faça login no sistema
-                  </div>
-                  <div id="login-inputs">
-                    <input type="text" placeholder="Nome de usuário" name="usuario">
-                    <br />
-                    <input type="password" placeholder="Senha" name="senha">
-                  </div>
-                  <div id="enviar">
-                    <input type="button" onclick="Login()" class="botao" value="Login">
-                    <a href="#">Esqueceu a sua senha?</a>
-                  </div>
-                </div>
-              </div> -->
-
         <div class="form-area5">
             <label>
                 <table>
@@ -101,8 +67,49 @@
             </div>
         </div>
         <br>
-            <input type="submit" value="Enviar" name="foi" onclick="quant()">
+            <input type="submit" value="Reservar" name="foi" onclick="quant()">
         </div>
-        
+
+    <!--historico de reservas-->
+    <a href="../loginNew/login.html">
+        <input type="submit" value="Pagina inicial" name="foi" onclick="redirecionar()"></a>
+
+        <div class="form-area6">
+            <spam><font color="#1C1C1C">MINHAS RESERVAS</spam></font>
+            <table>
+                <thead>
+                    <tr>
+                        <th class = "tabela">Cliente</th>
+                        <th class = "tabela">Mesa</th>
+                        <th class = "tabela">Data</th>
+                        <th class = "tabela">Horário</th>
+                    </tr>
+                </thead>
+                <div id="CRUD">
+  
+  </table>
+  <table  style="width:100%">
+  <div  id="ModalCRUD" tabindex="-1" role="dialog" aria-labelledby="MyDialogLabel">
+    <div  role="document">
+      <div >
+        <div >
+          <h4  id="ModalCRUDlable"></h4>
+        </div>
+        <div >
+        </div>
+        <div >
+          <button type="button"  data-dismiss="modal">Deletar</button>
+          <button id="btnGuardar" type="button">Salvar</button>
+          <button type="button"  data-dismiss="modal"  style="height: 20px; background-color #ce9654;"> alterar </span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+                
+
+                </tbody>
+            </table>
+        </div>
     </body>
 </html>
