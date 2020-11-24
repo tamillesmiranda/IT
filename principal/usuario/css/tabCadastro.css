@@ -1,7 +1,8 @@
 .form-area{
-  width: 500px;
-  margin-left: 210px;
+  width: 400px;
+  margin-left: 80px;
   margin-right: auto;
+  margin-top: 70px;
   background-color: #ffffff;
   border-radius: 10px;
   padding: 25px;
@@ -104,12 +105,12 @@
 }
 .form-area spam{
     font-size: 30px;
-    text-align: center;
+    text-align: right;
     font-family: 'Open Sans';
     font-weight: 500;
     text-decoration: none;
     letter-spacing: 0.1em;
-    padding: 90px;
+    padding: 25px;
     padding-top: 10px;    
     padding-bottom: 0px;
     color: black;
@@ -148,7 +149,7 @@ select .qtde {
     overflow-y: auto;
 }
 .cont{
-    padding-left: 50%;
+    padding-left: 35%;
     width: 30px; 
  }
  .form-area4{
@@ -174,8 +175,8 @@ select .qtde {
 }
 .form-area5{
     position: fixed;
-    top: 178px;
-    right: 47%;
+    top: 246px;
+    right: 70%;
     width: 10%;
     box-sizing: border-box;
     padding-left:  1px;
@@ -241,6 +242,6 @@ select .select-css {
 
 }
 .chek {
-    padding-right: 410px;
+    padding-right: 310px;
 
 }
