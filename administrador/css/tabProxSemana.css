@@ -8,7 +8,7 @@
     outline: none;
     color: #ffffff;
     font-size: 30px;
-    background-color: tomato;
+    background-color:#ce9654;
     cursor:pointer;
     border-radius: 20px;
 }
@@ -50,7 +50,7 @@
     width: 100%;
 }
 .form1-area iframe{
-    color: #F0B77D;
+    color:#ce9654;
 }
 .form1-area input[type=text],
 .form1-area input[type=number],

@@ -33,7 +33,7 @@ h2 {
     outline: none;
     color: #ffffff;
     font-size: 30px;
-    background-color: tomato;
+    background-color:#ce9654;
     cursor:pointer;
     border-radius: 20px;
 }
@@ -73,7 +73,7 @@ h2 {
     
 }
 .checkbox:checked + label {
-    color: tomato; 
+    color:#ce9654; 
 }
 .checkbox:checked + label ::before {
     background: white;
@@ -165,5 +165,5 @@ arrowAnim {
     background: #F4F4F4;
 }
 ::-webkit-scrollbar-thumb {
-    background: tomato;
+    background: #ce9654;
 }
