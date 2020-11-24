@@ -5,14 +5,11 @@
         <title>Reserva de mesas</title>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script type="text/javascript" src="js/carregatab1.js"></script>
-        <script type="text/javascript" src="js/cadastro.js"></script>
-        <script type="text/javascript" src="js/estoque.js"></script>
+        <script type="text/javascript" src="js/login.js"></script>
+        <script type="text/javascript" src="js/agendar.js"></script>
         <!-- <script type="text/javascript" src="js/login.js"></script>
         <script type="text/javascript" src="js/principal.js"></script> -->
-        <link href="css/novo.css" rel="stylesheet">
         <link href="css/tabCadastro.css" rel="stylesheet">
-        <link href="css/tabReserva.css" rel="stylesheet">
     </head>
     <body>
 <!--tabela de reservas-->
@@ -21,11 +18,11 @@
                 <table>
                     <thead>
                         <tr>
-                            <th class = "tabeladisp">Data da Reserva</th>
+                            <th class = "tabeladisp" id="data_reserva">Data da Reserva</th>
                         </tr>
                     </thead>
                 </table>
-                <input type="date" onblur="estoque()" name = "data" id="dia">
+                <input type="date" name = "data" id="dia">
             <table>
                 <thead>
                     <tr>
@@ -34,15 +31,15 @@
                 </thead>
             </table>
             <div class="chek">
-                <input class="checkbox" id="checkbox1" value="07:30" type="checkbox" name="check">
+                <input class="checkbox" id="checkbox1" value="07:30" type="checkbox" name="check1">
                 <label for="checkbox1"class="font">&nbsp &nbsp &nbsp 19:00</label><br>
-                <input class="checkbox" id="checkbox2" value="08:20" type="checkbox" name="check">
+                <input class="checkbox" id="checkbox2" value="08:20" type="checkbox" name="check2">
                 <label for="checkbox2"class="font">&nbsp &nbsp &nbsp 20:00</label><br>
-                <input class="checkbox" id="checkbox3" value="09:30" type="checkbox" name="check">
+                <input class="checkbox" id="checkbox3" value="09:30" type="checkbox" name="check3">
                 <label for="checkbox3"class="font">&nbsp &nbsp &nbsp 21:00</label><br>
-                <input class="checkbox" id="checkbox4" value="10:20" type="checkbox" name="check">
+                <input class="checkbox" id="checkbox4" value="10:20" type="checkbox" name="check4">
                 <label for="checkbox4"class="font">&nbsp &nbsp &nbsp 22:00</label><br>
-                <input class="checkbox" id="checkbox5" value="11:20" type="checkbox" name="check">
+                <input class="checkbox" id="checkbox5" value="11:20" type="checkbox" name="check5">
                 <label for="checkbox5"class="font">&nbsp &nbsp &nbsp 23:00</label><br>
             </div>
             </form><br>
@@ -58,16 +55,15 @@
                 </table>
             </label>
             <div class="cont">
-
-                <select class="qtde" id="q1"></select><br>
-                <select class="qtde" id="q2"></select><br>
-                <select class="qtde" id="q3"></select><br>
-                <select class="qtde" id="q4"></select><br>
-                <select class="qtde" id="q5"></select><br>
+                <input placeholder="0" min=0 max="12" id="n1" name="n1" type="number">
+                <input placeholder="0" min=0 max="12" id="n2" name="n2" type="number">
+                <input placeholder="0" min=0 max="12" id="n3" name="n3" type="number">
+                <input placeholder="0" min=0 max="12" id="n4" name="n4" type="number">
+                <input placeholder="0" min=0 max="12" id="n5" name="n5" type="number">
             </div>
         </div>
         <br>
-            <input type="submit" value="Reservar" name="foi" onclick="quant()">
+            <input type="submit" value="Reservar" name="foi" id="adicionar_dados">
         </div>
 
     <!--historico de reservas-->
@@ -79,37 +75,23 @@
             <table>
                 <thead>
                     <tr>
-                        <th class = "tabela">Cliente</th>
-                        <th class = "tabela">Mesa</th>
+                        <th class = "tabela">Pessoas</th>
                         <th class = "tabela">Data</th>
                         <th class = "tabela">Horário</th>
                     </tr>
                 </thead>
-                <div id="CRUD">
-  
-  </table>
-  <table  style="width:100%">
-  <div  id="ModalCRUD" tabindex="-1" role="dialog" aria-labelledby="MyDialogLabel">
-    <div  role="document">
-      <div >
-        <div >
-          <h4  id="ModalCRUDlable"></h4>
-        </div>
-        <div >
-        </div>
-        <div >
-          <button type="button"  data-dismiss="modal">Deletar</button>
-          <button id="btnGuardar" type="button">Salvar</button>
-          <button type="button"  data-dismiss="modal"  style="height: 20px; background-color #ce9654;"> alterar </span></button>
-        </div>
-      </div>
-    </div>
+  <tbody>
+
+  </tbody>
+  <hr>
+
+    </table>
   </div>
 </div>
                 
 
-                </tbody>
-            </table>
+                
+
         </div>
     </body>
 </html>

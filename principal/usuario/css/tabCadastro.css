@@ -234,7 +234,9 @@ select .qtde {
     padding-left: 35%;
     width: 30px; 
  }
-
+ .cont input{
+    color: white;
+ }
 .tabeladisp2{
     height: 10px;
     top: 75%;
