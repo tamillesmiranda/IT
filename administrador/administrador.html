@@ -25,16 +25,46 @@
         </div>
         <input type="submit" value=" controle" name="foi" onclick="redirecionar()">
         <div class="form-area">
-            <spam><font color="#1C1C1C">TODAS AS RESERVAS</spam></font>
-            <table>
-                <thead>
-                    <tr>
-                        <th class="tabela" for="nome">Nome</th>
-                        <th class = "tabela">Mesa</th>
-                        <th class = "tabela">Data</th>
-                        <th class = "tabela">Horário</th>
-                    </tr>
-                </thead>
+            <spam><font color="#1C1C1C"></spam></font>
+            <form action="" class="tabela">
+
+              <label >Nome</label>
+              <input required  type="text" name="nome" placeholder="Digite seu nome" >
+          
+              <label >Mesa</label>
+              <input required type="number" name="idade" placeholder="Selecione a mesa">
+          
+              <label>DATA</label>
+              <input required type="text" name="cidade" placeholder="Data Desejada">
+
+              <label >Horário</label>
+              <input required type="text" name="cidade" placeholder="Hora Desejada">
+          
+              <button id="adicionar_dados">Adicionar Linha</button>
+          
+            </form>
+            <div class="alerta"></div>
+          
+            <hr>
+          
+            <table border="5px solid" >
+              <thead>
+                <tr>
+                  <td class="tabela52">Nome</td>
+                  <td class="tabela52">Mesa</td>
+                  <td class="tabela52">DATA</td>
+                  <td class="tabela52">Horario</td>
+                </tr>
+              </thead>
+              </thead>
+          
+              <tbody >
+                
+              </tbody>
+          
+                <hr>
+            </table>
+            
 
                 <tbody id = "tab">
                     <table  style="width:100%">
