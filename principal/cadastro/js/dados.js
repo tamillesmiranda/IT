@@ -1,3 +1,3 @@
 function redirecionar(){
-    window.location.href = "../loginNew/index.html";
+    window.location.href = "../loginNew/login.html";
 }
