@@ -1,3 +1,3 @@
 function red(){
-    window.location.href = "./cadastro/cadastro.html";
+    window.location.href = "../cadastro/cadastro.html";
 }
