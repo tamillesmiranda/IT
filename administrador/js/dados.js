@@ -123,3 +123,5 @@ function hor(hora) {
     }
     return horario;
 }
+
+botao_adicionar.addEventListener('click',adicionar_dados);
