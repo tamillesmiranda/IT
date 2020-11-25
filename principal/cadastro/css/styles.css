@@ -43,14 +43,15 @@ input[type=submit] {
   text-align: center;
 }
 a {
-  color: #E60084;
+  color: transparent;
 }
 
 body {
   padding-top: 5vh;
-  background-image: url('../img/f.jpg');
+  background: url('../img/f.jpg')no-repeat;
+  background-color: black;
+  -webkit-background-size: cover;
   background-size: cover;
-  background-position-y: -150px;
 }
 
 /* form */
@@ -104,6 +105,10 @@ form {
 }
 
 .half-box {
+  flex: 1 1 45%;
+  position: relative;
+}
+.half-box2 {
   flex: 1 1 45%;
   position: relative;
 }

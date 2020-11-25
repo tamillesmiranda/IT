@@ -20,32 +20,25 @@ a {
 
 body {
   padding-top: 5vh;
-  background-image: url('../img/f.jpg');
+  background: url('../img/f.jpg')no-repeat;
+  background-color: black;
+  -webkit-background-size: cover;
   background-size: cover;
-  background-position-y: -150px;
+
 }
 
 /* form */
 
 
-#loginUser {
-  width: 500px;
-  margin-left: 50px;
-  margin-right: auto;
-  background-color: #FFF;
-  border-radius: 10px;
-  padding: 25px;
-  position: fixed;
-}
 #loginAdm {
   width: 500px;
-  margin-left: 750px;
+  margin-left: 600px;
   padding-top: 10px;
   margin-right: 300px;
   background-color: #FFF;
   border-radius: 10px;
   padding: 25px;
-  position: relative;
+  position: absolute;
 }
 
 #main-container h1 {
