@@ -12,6 +12,21 @@
     text-align: center;
     text-transform: capitalize;
 }  
+.home input[type=submit] {
+    border: none;
+    text-align: center;
+    top: 10%;
+    right: 5%;
+    height: 30px;
+    width: 100px;
+    color: #ffffff;
+    font-size: 15px;
+    margin-top: -2%;
+    background-color: #ce9654;
+    background-image: #ce9654;
+    cursor: pointer;
+    border-radius: 10px;
+  }
 .form-area table {
     width: 630px;
     padding-right: 0px;

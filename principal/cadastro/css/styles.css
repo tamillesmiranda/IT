@@ -21,7 +21,7 @@ input[type=submit] {
   top: 10%;
   right: 5%;
   height: 35px;
-  width: 310px;
+  width: 350px;
   color: #ffffff;
   font-size: 15px;
   background-color: transparent;
@@ -29,7 +29,21 @@ input[type=submit] {
   cursor: pointer;
   border-radius: 20px;
 }
-
+.home input[type=submit] {
+  border: none;
+  text-align: center;
+  top: 10%;
+  right: 5%;
+  height: 30px;
+  width: 100px;
+  color: #ffffff;
+  font-size: 15px;
+  margin-top: -2%;
+  background-color: #ce9654;
+  background-image: #ce9654;
+  cursor: pointer;
+  border-radius: 10px;
+}
 #btn-submit1{
   margin-top: 15px;
   margin-left: auto;
@@ -56,22 +70,12 @@ body {
 
 /* form */
 #loginUser {
-  width: 500px;
+  width: 450px;
+  height: 550px;
   margin-left: 100px;
   margin-right: auto;
   background-color: #FFF;
   border-radius: 10px;
-  padding: 25px;
-  position: absolute;
-}
-#loginAdm {
-  width: 500px;
-  margin-left: 100px;
-  margin-right: 300px;
-  margin-bottom: 10px;
-  background-color: #FFF;
-  border-radius: 10px;
-  margin-top: 90px;
   padding: 25px;
   position: absolute;
 }
@@ -112,9 +116,8 @@ form {
   flex: 1 1 45%;
   position: relative;
 }
-
 .spacing {
-  margin-right: 2.5%;
+  margin-right: 3.0%;
 }
 
 label {
@@ -125,7 +128,7 @@ label {
 input {
   border-bottom: 2px solid #323232;
   font-size: .9rem;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 input:focus {
