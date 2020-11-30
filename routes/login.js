@@ -1,44 +1,29 @@
-var  express = require('express')
-    ,bodyParser = require('body-parser')
-    ,jwt = require('jsonwebtoken') // package jwt 
-    ,config = require('../config') // arquivo com chave do token
-    ,Usuario = require('../models/usuario')
+var passport = require('passport');
 
+var express = require('express');
 var router = express.Router();
-var requireDir = require('require-dir');
-router.use(bodyParser.urlencoded({ extended: false }));
-router.use(bodyParser.json());
 
-router.get('/', (req, res, next) => {
-  res.status(200).send({
-      mensagem: 'Usando o Get da rota de login'
-  });
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('login', { title: 'Login', message: null });
 });
 
-//Login, gerar token de acesso
-router.post('/', function(req, res, next) {
-
-  Usuario.findOne({ login: req.body.login }, function (err, user) {
-    if (err) return res.status(500).send('Internal server erro');
-    if (!user) return res.status(404).send('Usuario nao encontrado');
-    
-    // Verifica se senha informada esta correta
-    var senhaValidada = user.validaSenha(req.body.senha)
-    if (!senhaValidada) return res.status(401).send({ auth: false, token: null });
-
-    // Se o usuario existir e a senha estiver valida, o token e gerado
-    var token = jwt.sign({ id: user._id, email: user.email }, config.secret, {
-      expiresIn: 86400 // validade do token, 24hrs
-    });
-
-    // Retorna o token de acesso
-    res.status(200).send('Bem Vindo!');
-  });
-
+router.get('/login', function(req, res){
+  if(req.query.fail)
+    res.render('login', { message: 'Usuário e/ou senha incorretos!', error: true });
+  else if(req.query.reset)
+    res.render('login', { message: 'A sua nova senha chegará no seu email em instantes!', error: false });
+  else
+    res.render('login', { message: null });
 });
 
-router.get('/logout', function(req, res) {
-  res.status(200).send({ auth: false, token: null });
-});
+router.post('/login',
+  passport.authenticate('local', { successRedirect: '/index', failureRedirect: '/login?fail=true' })
+);
+
+router.post('/logoff', function(req, res, next){
+  req.logOut();
+  res.redirect('/login');
+})
 
 module.exports = router;

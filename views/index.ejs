@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/css/tabSemanaAtual.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <form action="/logoff" method="POST">
+      <input type="submit" value="Logoff" id="logoff"/>
+    </form>
+    <p><%= qtd %> usuários cadastrados!</p>
+    <br>
+    <p>
+      <%
+        if(profile === '2'){
+      %>
+          <a href="/reports">reports para admins</a>
+      <% } %>
+    </p>
+    <br>
+    <div class="divCrud">
+    <table>
+      <thead>
+        <tr>
+          <td class="tabela">Nome</td>
+          <td class="tabela">Mesa</td>
+          <td class="tabela">Data</td>
+          <td class="tabela">Horario</td>
+          <td class="tabela">Ação</td>
+        </tr>
+      </thead>
+  
+   
+      <tbody >
+        <% 
+        if(docs) {
+          for(var i=0; i < docs.length; i++){
+            %>
+            <tr>
+              <td><%= docs[i].username %></td>
+              <td><%= docs[i].numero_de_pessoas %></td>
+              <td><%= docs[i].data_cartao %></td>
+              <td><%= docs[i].horario_reserva %></td>
+              <td>
+                <a href="<%= docs._id %>" id="edit">
+                  <i style="font-size:18px" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                </a>
+                <a href="<%= docs._id %>" class="btn btn-danger"  id="excluir"
+                  onclick="return confirm('Tem certeza que deseja excluir?');">
+                  <i style="font-size:18px" class="fa">&#xf014;</i>
+                </a>
+              </td>
+            </tr>
+            <%
+          }
+        }
+      %>
+      </tbody>
+    </table>
+    <table>
+      <tr>
+        <td colspan="2">
+          <%
+            for(var i=1; i <= qtdPaginas; i++){
+              if(pagina === i){
+          %>
+                <%= i %> | 
+          <% 
+              } else {
+          %>
+              <a href="/index/<%= i %>">
+                <%= i %>
+              </a> | 
+          <%
+            } 
+          }
+          %>
+        </td>
+      </tr>
+    </table>
+  </div>
+    <p>
+      <a href="/users/signup" id="cadastrar">Cadastrar</a>
+    </p>
+  </body>
+</html>

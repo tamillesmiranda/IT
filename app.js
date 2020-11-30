@@ -1,48 +1,72 @@
-const express = require('express')
-  , path = require('path')
-  , cookieParser = require('cookie-parser')
-  , bodyParser = require('body-parser')
-  , mongoose = require("mongoose")
-  , jsonwebtoken = require("jsonwebtoken");
+const passport = require('passport')  
+const session = require('express-session')  
+const MongoStore = require('connect-mongo')(session)
 
-const cors = require('cors')
-const usuario = require('./routes/usuario')
-const login = require('./routes/login')
-const consumidores = require('./routes/consumidores')
-const fornecedores = require('./routes/fornecedores')
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
 
-const app = express();
-app.use(cors())
-mongoose.connect(
-  "mongodb://localhost:27017/projeto",
-  {
-    useNewUrlParser: true
+global.authenticationMiddleware = () => {  
+  return function (req, res, next) {
+    if (req.isAuthenticated() && require("./permissions")(req))
+        return next()
+    res.redirect('/login?fail=true')
   }
-);
+}
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser())
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+var loginRouter = require('./routes/login');
+var reportsRouter = require('./routes/reports');
 
-//ROUTES
-app.use('/', login);
-app.use('/usuarios', usuario);
-app.use('/consumidores', consumidores);
-app.use('/fornecedores', fornecedores);
+var app = express();
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.use((req, res, next) => {
-  const error = new Error("Not found");
-  error.status = 404;
-  next(error);
+//autenticação
+require('./auth')(passport);
+app.use(session({  
+  store: new MongoStore({
+    db: global.db,
+    ttl: 30 * 60 // = 30 minutos de sessão
+  }),
+  secret: process.env.MONGO_STORE_SECRET,//configure um segredo seu aqui
+  resave: false,
+  saveUninitialized: false
+}))
+app.use(passport.initialize());
+app.use(passport.session());
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/', loginRouter);
+app.use('/index', indexRouter);
+app.use('/users', usersRouter);
+app.use('/reports', reportsRouter);
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
 });
 
-app.use((error, req, res, next) => {
-  res.status(error.status || 500);
-  res.json({
-    error: {
-      message: error.message
-    }
-  });
+// error handler
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
 });
 
 module.exports = app;
